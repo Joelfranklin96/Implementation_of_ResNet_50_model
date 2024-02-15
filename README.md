@@ -1,11 +1,12 @@
 # Implementation of ResNet 50 model
 
-Implemented 'Identity_block' and 'Convolutional_block' which are two important components of the ResNet-50 model.
-In 'Identity_block', the shape of 'X_shortcut' is the same as the shape of the output of the 'Identity_block' which is 'X'.
-In 'Convolutional_block', 'X_shortcut' passes through a convolutional layer and the dimensions change so as to match the shape of the output of the 'Convolutional_block' but this is a linear transformation as there is no activation function.
-The 'Identity_block' acts as a identity function. The 'Convolutional_block' doesn't exactly act as a identity function as it linearly transforms the 'X_shortcut' but note that this is just linear transformation and there is no non-linear activation function and hence no non-linear transformation.
-Both the 'identity_block' and 'Convolutional_block' facilitates the training of deeper networks by maintaining stronger gradient flows, even when the dimensions change in the case of 'Convolutional_block'.
-The details of the ResNet-50 model are as below :-
+- Implemented 'Identity_block' and 'Convolutional_block' which are two important components of the ResNet-50 model.
+- In 'Identity_block', the shape of 'X_shortcut' is the same as the shape of the output of the 'Identity_block' which is 'X'.
+- In 'Convolutional_block', 'X_shortcut' passes through a convolutional layer and the dimensions change so as to match the shape of the output of the 'Convolutional_block' but this is a linear transformation as there is no activation function.
+- The 'Identity_block' acts as a identity function. The 'Convolutional_block' doesn't exactly act as a identity function as it linearly transforms the 'X_shortcut' but note that this is just linear transformation and there is no non-linear activation function and hence no non-linear transformation.
+- Both the 'identity_block' and 'Convolutional_block' facilitates the training of deeper networks by maintaining stronger gradient flows, even when the dimensions change in the case of 'Convolutional_block'.
+
+- The details of the ResNet-50 model are as below :-
 
 - Zero-padding pads the input with a pad of (3,3)
 - Stage 1:
